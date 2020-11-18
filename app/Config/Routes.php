@@ -35,30 +35,9 @@ $routes->get('/', 'HomeController::index');
 
 $routes->resource('user', ['controller' => 'UserController']);
 
-$routes->get('/blt/excel', 'BltController::excel');
-$routes->get('/blt/desa', 'BltController::list/6');
-$routes->get('/blt/kecamatan', 'BltController::list/5');
-$routes->get('/blt/dinsos', 'BltController::list/4');
-$routes->get('/blt/provinsi', 'BltController::list/3');
-$routes->get('/blt/kementerian', 'BltController::list/2');
-$routes->put('/blt/valid/(:num)', 'BltController::valid/$1');
-
-$routes->resource('blt', ['controller' => 'BltController']);
-
-
 $routes->get('/login', 'UserController::login');
 $routes->post('/login', 'UserController::auth');
 $routes->get('/logout', 'UserController::logout');
-
-$routes->get('/saran', 'InboxController::list/1');
-$routes->get('/saran/(:num)', 'InboxController::detail/$1');
-$routes->post('/saran', 'InboxController::inboxin/1');
-$routes->get('/masukkan/(:num)', 'InboxController::detail/$1');
-$routes->get('/masukkan', 'InboxController::list/2');
-$routes->post('/masukkan', 'InboxController::inboxin/2');
-$routes->post('/pertanyaan', 'InboxController::inboxin/3');
-$routes->get('/pertanyaan/(:num)', 'InboxController::detail/$1');
-$routes->get('/pertanyaan', 'InboxController::list/3');
 
 /**
  * --------------------------------------------------------------------
