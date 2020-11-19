@@ -17,12 +17,12 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="templates/eterna/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="templates/eterna/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="templates/eterna/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="templates/eterna/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="templates/eterna/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="templates/eterna/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="templates/eterna/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="templates/eterna/assets/vendors/icofont/icofont.min.css" rel="stylesheet">
+  <link href="templates/eterna/assets/vendors/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="templates/eterna/assets/vendors/animate.css/animate.min.css" rel="stylesheet">
+  <link href="templates/eterna/assets/vendors/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="templates/eterna/assets/vendors/venobox/venobox.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="templates/eterna/assets/css/style.css" rel="stylesheet">
@@ -395,16 +395,16 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="templates/eterna/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="templates/eterna/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="templates/eterna/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="templates/eterna/assets/vendor/php-email-form/validate.js"></script>
-  <script src="templates/eterna/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="templates/eterna/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="templates/eterna/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="templates/eterna/assets/vendor/counterup/counterup.min.js"></script>
-  <script src="templates/eterna/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="templates/eterna/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="templates/eterna/assets/vendors/jquery/jquery.min.js"></script>
+  <script src="templates/eterna/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="templates/eterna/assets/vendors/jquery.easing/jquery.easing.min.js"></script>
+  <script src="templates/eterna/assets/vendors/php-email-form/validate.js"></script>
+  <script src="templates/eterna/assets/vendors/jquery-sticky/jquery.sticky.js"></script>
+  <script src="templates/eterna/assets/vendors/owl.carousel/owl.carousel.min.js"></script>
+  <script src="templates/eterna/assets/vendors/waypoints/jquery.waypoints.min.js"></script>
+  <script src="templates/eterna/assets/vendors/counterup/counterup.min.js"></script>
+  <script src="templates/eterna/assets/vendors/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="templates/eterna/assets/vendors/venobox/venobox.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="templates/eterna/assets/js/main.js"></script>
