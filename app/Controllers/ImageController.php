@@ -9,6 +9,10 @@ class ImageController extends BaseController
 	{
 		return view('admin/image/index');
 	}
+	public function index_preview()
+	{
+		return view('admin/image/index_preview');
+	}
 	public function data()
 	{
 		$image = new Image();
