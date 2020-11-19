@@ -15,7 +15,7 @@
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-2 mt-5">
+        <div class="col-md-4 mt-5">
           <div class="card" style="">
             <!-- <div class="card-header">
               login form

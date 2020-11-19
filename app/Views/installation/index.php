@@ -34,7 +34,7 @@
 	              </div>
 	              <div class="form-group">
 	                <label for=""><i class="fa fa-envelope"></i> email</label>
-	                <input type="text" name="email" placeholder="admin email" class="form-control" required>
+	                <input type="email" name="email" placeholder="admin email" class="form-control" required>
 	              </div>
 	              <div class="form-group">
 	                <label for=""><i class="fa fa-key"></i> password</label>
