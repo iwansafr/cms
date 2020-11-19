@@ -33,7 +33,12 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'HomeController::index');
 
-$routes->resource('user', ['controller' => 'UserController']);
+$routes->group('/admin',function($routes)
+{
+	$routes->get('/','AdminController::index');
+	$routes->resource('user', ['controller' => 'UserController']);
+});
+
 
 $routes->get('/login', 'UserController::login');
 $routes->post('/login', 'UserController::auth');

@@ -1,66 +1,48 @@
-<?php
-$this->extend('layout/dashboard');
-
-$this->section('content');
-?>
-<main>
-  <div class="container-fluid">
-    <h1 class="mt-4">Dashboard</h1>
-    <ol class="breadcrumb mb-4">
-      <li class="breadcrumb-item">Dashboard</li>
-      <li class="breadcrumb-item active">Login</li>
-    </ol>
-  </div>
-  <div class="container">
-    <form action="" method="post">
-      <?= csrf_field() ?>
-      <div class="card">
-        <div class="card-header">
-          Login
-        </div>
-        <div class="card-body">
-          <?php
-          helper('system');
-          if (!empty(session()->getFlashData('message'))) {
-            $message = session()->getFlashData('message');
-            alert($message['msg'], $message['alert']);
-          }
-          ?>
-          <div class="form-group">
-            <?php
-            $value = old('username');
-            if (!empty($validation->showError('username'))) {
-              $valid = 'is-invalid';
-            } else {
-              $valid = '';
-            } ?>
-            <label for="">username</label>
-            <input type="text" class="form-control <?php echo $valid; ?>" name="username" value="<?php echo $value; ?>">
-            <div class="invalid-feedback">
-              <?php echo $validation->showError('username'); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Login - </title>
+  <link href="/template/css/styles.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+  <?= csrf_meta() ?>
+</head>
+<body class="bg-secondary">
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 mt-5">
+          <div class="card" style="">
+            <!-- <div class="card-header">
+              login form
+            </div> -->
+            <div class="card-body">
+              <div class="form-group text-center">
+                <img src="https://www.freepnglogos.com/uploads/fox-head-art-logo-png-13.png" width="100" alt="">
+              </div>
+              <div class="form-group">
+                <label for=""><i class="fa fa-user"></i> username</label>
+                <input type="text" name="username" placeholder="username" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for=""><i class="fa fa-key"></i> password</label>
+                <input type="password" name="password" placeholder="password" class="form-control">
+              </div>
+              <div class="form-group">
+                <button class="btn btn-secondary" type="submit">Login</button>
+              </div>
             </div>
+            <!-- <div class="card-footer">
+              
+            </div> -->
           </div>
-          <div class="form-group">
-            <?php
-            $value = old('password');
-            if (!empty($validation->showError('password'))) {
-              $valid = 'is-invalid';
-            } else {
-              $valid = '';
-            } ?>
-            <label for="">password</label>
-            <input type="password" class="form-control <?php echo $valid; ?>" name="password" value="<?php echo $value; ?>">
-            <div class="invalid-feedback">
-              <?php echo $validation->showError('password'); ?>
-            </div>
-          </div>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-success" type="submit"><i class="fa fa-sign-in-alt"></i> Login</button>
         </div>
       </div>
-    </form>
-  </div>
-</main>
-<?php
-$this->endSection();
+    </div>
+  </main>
+</body>
+</html>
