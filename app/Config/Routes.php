@@ -37,8 +37,10 @@ $routes->post('/installation', 'InstallationController::install');
 
 $routes->group('/admin',function($routes)
 {
+	$routes->get('image/data','ImageController::data');
 	$routes->get('/','AdminController::index');
 	$routes->resource('user', ['controller' => 'UserController']);
+	$routes->resource('image',['controller' => 'ImageController']);
 });
 
 
