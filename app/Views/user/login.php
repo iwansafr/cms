@@ -15,30 +15,51 @@
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4 mt-5">
-          <div class="card" style="">
-            <!-- <div class="card-header">
-              login form
-            </div> -->
+        <div class="col-md-4 col-sm-12 col-lg-3 mt-5">
+          <div class="card">
             <div class="card-body">
-              <div class="form-group text-center">
-                <img src="https://www.freepnglogos.com/uploads/fox-head-art-logo-png-13.png" width="100" alt="">
-              </div>
-              <div class="form-group">
-                <label for=""><i class="fa fa-user"></i> username</label>
-                <input type="text" name="username" placeholder="username" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for=""><i class="fa fa-key"></i> password</label>
-                <input type="password" name="password" placeholder="password" class="form-control">
-              </div>
-              <div class="form-group">
-                <button class="btn btn-secondary" type="submit">Login</button>
-              </div>
+              <form action="" method="post">
+                <?= csrf_field() ?>
+                <div class="form-group text-center">
+                  <img src="icon.png" width="100" alt="">
+                </div>
+                <div class="form-group">
+                  <?php 
+                  $valid = '';
+                  $msg = '';
+                  if(!empty($validation->hasError('username')) || !empty(session()->getFlashData('username_error')))
+                  {
+                    $valid = 'is-invalid';
+                    $msg = !empty($validation->hasError('username')) ? $validation->showError('username') : session()->getFlashData('username_error')['msg'];
+                  }
+                  ?>
+                  <label for=""><i class="fa fa-user"></i> username</label>
+                  <input type="text" name="username" placeholder="username" class="form-control <?= $valid ?>" value="<?= old('username') ?>" >
+                  <div class="invalid-feedback">
+                    <?= $msg ?>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <?php 
+                  $valid = '';
+                  $msg = '';
+                  if(!empty($validation->hasError('password')) || !empty(session()->getFlashData('password_error')))
+                  {
+                    $valid = 'is-invalid';
+                    $msg = !empty($validation->hasError('password')) ? $validation->showError('password') : session()->getFlashData('password_error')['msg'];
+                  }
+                  ?>
+                  <label for=""><i class="fa fa-key"></i> password</label>
+                  <input type="password" name="password" placeholder="password" class="form-control <?= $valid ?>" value="<?= old('password') ?>" >
+                  <div class="invalid-feedback">
+                    <?= $msg ?>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-secondary" type="submit">Login</button>
+                </div>
+              </form>
             </div>
-            <!-- <div class="card-footer">
-              
-            </div> -->
           </div>
         </div>
       </div>

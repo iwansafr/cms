@@ -9,6 +9,7 @@ class UserController extends BaseController
   public function __construct()
   {
     helper('form');
+    session();
   }
   public function index()
   {
@@ -160,12 +161,12 @@ class UserController extends BaseController
       if (decrypt($data['password'], $user['password'])) {
         $user['logged_in'] = TRUE;
         session()->set($user);
-        return redirect()->to('/')->withInput()->with('message', ['msg' => 'Welcome to BLT APP', 'alert' => 'success']);
+        return redirect()->to('/')->withInput()->with('message', ['msg' => 'Login Success', 'alert' => 'success']);
       } else {
-        return redirect()->to('/login')->withInput()->with('message', ['msg' => 'Password is not Valid', 'alert' => 'danger']);
+        return redirect()->to('/login')->withInput()->with('password_error', ['msg' => 'Password is not Valid', 'alert' => 'danger']);
       }
     } else {
-      return redirect()->to('/login')->withInput()->with('message', ['msg' => 'Username is not Registered', 'alert' => 'danger']);
+      return redirect()->to('/login')->withInput()->with('username_error', ['msg' => 'Username is not Registered', 'alert' => 'danger']);
     }
   }
 }

@@ -42,8 +42,8 @@ $routes->group('/admin',function($routes)
 });
 
 
-$routes->get('/login', 'UserController::login');
 $routes->post('/login', 'UserController::auth');
+$routes->get('/login', 'UserController::login');
 $routes->get('/logout', 'UserController::logout');
 
 /**
