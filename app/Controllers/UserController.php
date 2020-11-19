@@ -130,7 +130,13 @@ class UserController extends BaseController
   }
   public function login()
   {
-    return view('user/login', ['validation' => \Config\Services::validation()]);
+    $user = new User();
+    $exist_user = $user->find();
+    if(count($exist_user) > 0){
+      return view('user/login', ['validation' => \Config\Services::validation()]);
+    }else{
+      return redirect()->to('installation');
+    }
   }
   public function logout()
   {
