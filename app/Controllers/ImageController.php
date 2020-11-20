@@ -24,11 +24,11 @@ class ImageController extends BaseController
 	}
 	public function create()
 	{
+		$data = [
+			'title' => $this->request->getPost('title'),
+		];
 		if(!empty($this->request->getFile('image')))
 		{
-			$data = [
-				'title' => $this->request->getPost('title'),
-			];
 	    $file = $this->request->getFile('image');
 	    if (!empty($file->getClientExtension())) {
 	      $image = md5(time()).'.' . $file->getClientExtension();
@@ -50,6 +50,15 @@ class ImageController extends BaseController
 		      }
 	      }
 	    }
+		}else if(!empty($this->request->getPost('image')))
+		{
+			$data['image'] = $this->request->getPost('image');
+			$imageModel = new Image();
+      if($imageModel->save($data)){
+      	echo json_encode(['status'=>true,'data'=>$data]);
+      }else{
+      	echo json_encode(['status'=>false,'msg'=>'image failed upload']);
+      }
 		}
 	}
 }

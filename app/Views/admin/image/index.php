@@ -45,7 +45,7 @@ $this->section('content');
 			  <div class="modal-dialog">
 			    <div class="modal-content">
 			      <div class="modal-body">
-			      	<form action="/admin/image/" method="post" id="imageForm" entype="multipart/form-data">
+			      	<form action="/admin/image" method="post" id="imageLinkForm" entype="multipart/form-data">
 			      		<?= csrf_field() ?>
 				      	<div class="form-group">
 				      		<label for="title">title</label>
@@ -53,7 +53,7 @@ $this->section('content');
 				      	</div>
 				        <div class="form-group">
 				        	<label for="image">image link</label>
-				        	<input type="text" class="form-control image_link">
+				        	<input type="text" name="image" class="form-control image_link">
 				        	<img src="" class="img image_place img-fluid" width="200" >
 				        </div>
 				        <button type="submit" class="btn btn-success" id="upload"><i class="fa fa-upload"></i></button>
