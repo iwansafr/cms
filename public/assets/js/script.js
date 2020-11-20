@@ -42,4 +42,9 @@ $(document).ready(function () {
       // setInterval($('#btn_upload').trigger('click'),300);
     }
   });
+  $(document).on('change', '.image_link', function () {
+    // console.log($(this));
+    var a = $(this).siblings('.image_place');
+    a.attr('src',$(this).val());
+  });
 });
