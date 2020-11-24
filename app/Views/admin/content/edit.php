@@ -25,17 +25,19 @@ $this->section('content');
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="form-group">
-						<div class="dropdown">
-						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						  	<i class="fa fa-upload"></i> Add Image
-						  </button>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#uploadImage"><i class="fa fa-image"></i> Upload Image</a>
-						    <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#imageLink"><i class="fa fa-link"></i> Link Image</a>
+						<label>Featured Image</label>
+            <?php $valid = !empty($validation->showError('foto_diri')) ? 'is-invalid' : ''; ?>
+            <?php $value = !empty($data['foto_diri']) ? '/images/blt/' . $data['foto_diri'] : old('foto_diri'); ?>
+            <div class="input-group">
+						  <input type="text" id="input_image" name="image" class="form-control" aria-label="Text input with dropdown button">
+						  <div class="input-group-append">
+						    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="image_type">Image</button>
+						    <div class="dropdown-menu">
+						      <a class="dropdown-item image_type" data-type="file" href="#">Upload Image</a>
+						      <a class="dropdown-item image_type" data-type="link" href="#">Link Image</a>
+						    </div>
 						  </div>
 						</div>
-	        </div>
 				</div>
 			</div>
 		</form>
@@ -49,5 +51,17 @@ $this->section('js');
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script src="/assets/js/validate.js"></script>
 <script src="/assets/js/image_upload.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.image_type').on('click',function(){
+			var label = $(this).data('type');
+			$('#image_type').html(label);
+			$('#input_image').attr('type',label);
+			if(label=='link'){
+				$('#input_image').attr('placeholder','please insert link image');
+			}
+		});
+	});
+</script>
 <?php
 $this->endSection();

@@ -30,7 +30,7 @@
           <div class="collapse" id="collapseblt" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
             <nav class="sb-sidenav-menu-nested nav">
               <?php
-              echo '<a class="nav-link" href="admin/content/new">Tambah Content</a>';
+              echo '<a class="nav-link" href="admin/content/new"><i class="fa fa-plus"></i> Tambah Content</a>';
               echo '<a class="nav-link" href="admin/content/">List Content</a>';
               ?>
             </nav>
