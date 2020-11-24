@@ -20,7 +20,9 @@ class ContentController extends BaseController
 	}
 	public function new()
 	{
-		return view('admin/content/edit');
+		session();
+		helper('form');
+		return view('admin/content/edit',['validation'=>\Config\Services::validation()]);
 	}
 }
 

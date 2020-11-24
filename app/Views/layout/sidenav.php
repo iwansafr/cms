@@ -23,28 +23,15 @@
             </nav>
           </div>
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseblt" aria-expanded="false" aria-controls="collapseblt">
-            <div class="sb-nav-link-icon"><i class="fa fa-money-bill-alt"></i></div>
-            BLT
+            <div class="sb-nav-link-icon"><i class="fa fa-file"></i></div>
+            Content
             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
           </a>
           <div class="collapse" id="collapseblt" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
             <nav class="sb-sidenav-menu-nested nav">
               <?php
-              if (session()->get('role') == 1) {
-                echo '<a class="nav-link" href="/blt/new">Tambah Data</a>';
-                echo '<a class="nav-link" href="/blt">List Data</a>';
-              } else if (session()->get('role') == 2) {
-                echo '<a class="nav-link" href="/blt/kementerian">List Data</a>';
-              } else if (session()->get('role') == 3) {
-                echo '<a class="nav-link" href="/blt/provinsi">List Data</a>';
-              } else if (session()->get('role') == 4) {
-                echo '<a class="nav-link" href="/blt/dinsos">List Data</a>';
-              } else if (session()->get('role') == 5) {
-                echo '<a class="nav-link" href="/blt/kecamatan">List Data</a>';
-              } else if (session()->get('role') == 6) {
-                echo '<a class="nav-link" href="/blt/new">Tambah Data</a>';
-                echo '<a class="nav-link" href="/blt/desa">List Data</a>';
-              }
+              echo '<a class="nav-link" href="admin/content/new">Tambah Content</a>';
+              echo '<a class="nav-link" href="admin/content/">List Content</a>';
               ?>
             </nav>
           </div>

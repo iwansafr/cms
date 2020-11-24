@@ -1,18 +1,4 @@
 $(document).ready(function () {
-  function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      alert("perangkat anda tidak mendukung untuk menangkap lokasi anda");
-    }
-  }
-
-  function showPosition(position) {
-    $("form").find(".card-body").append("<label><b>Koordinat Rumah</b> <i class='fa fa-map'></i></label><br>Latitude: " + position.coords.latitude +
-      " | Longitude: " + position.coords.longitude + "<input type='hidden' name='longitude' value='" + position.coords.longitude + "'><input type='hidden' name='latitude' value='" + position.coords.latitude + "'>");
-  }
-  getLocation();
-
   function readURL(input, a) {
     if (input.files && input.files[0]) {
       var reader = new FileReader();

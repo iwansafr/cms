@@ -22,7 +22,7 @@ $(document).ready(function(){
 					processData: false,
 					success: function(res){
 						$('#image_box').prepend(`
-							<div class="col-2">
+							<div class="col-md-2 col-sm-6">
 								<div class="card-body text-center border">
 				    			<img src="/images/upload/${res.data.image}" class="img img-fluid" style="min-height: 200px;object-fit:cover;" alt="">
 				    			<label class="text-secondary" for="">${res.data.title}</label>
@@ -65,7 +65,7 @@ $(document).ready(function(){
 						image_src = `/images/upload/${res.data[key].image}`;
 					}
 					$('#image_box').prepend(`
-						<div class="col-2">
+						<div class="col-md-2 col-sm-6">
 							<div class="card-body text-center border">
 			    			<img src="${res.data.image}" class="img img-fluid" style="min-height: 200px;object-fit:cover;" alt="">
 			    			<label class="text-secondary" for="">${res.data.title}</label>
@@ -95,7 +95,7 @@ $(document).ready(function(){
 						image_src = `/images/upload/${res.data[key].image}`;
 					}
 					$('#image_box').prepend(`
-						<div class="col-2">
+						<div class="col-md-2 col-sm-6">
 							<div class="card-body text-center border">
 			    			<img src="${image_src}" class="img img-fluid" style="min-height: 200px;object-fit:cover;" alt="">
 			    			<label class="text-secondary">${res.data[key].title}</label>
